@@ -8,14 +8,14 @@ class List extends Component{
 
     }
      componentDidMount(){
-        axios.get('http://localhost:5000/api/items')
+        axios.get('https://mern-list-app.herokuapp.com/api/items')
         .then(res => {
             console.log(res);
             this.setState({items:res.data});
         });
      }
      componentDidUpdate(){
-        axios.get('http://localhost:5000/api/items')
+        axios.get('https://mern-list-app.herokuapp.com/api/items')
         .then(res => {
             console.log(res);
             this.setState({items:res.data});
@@ -24,7 +24,7 @@ class List extends Component{
 
     
      del(id) {
-        axios.delete('http://localhost:5000/api/items/'+id)
+        axios.delete('https://mern-list-app.herokuapp.com/api/items/'+id)
         .then(res => {
             console.log(res);
            console.log(res.data);
