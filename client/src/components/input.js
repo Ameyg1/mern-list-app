@@ -14,7 +14,7 @@ class Input extends Component{
        // const item={
          // name:this.state.name,
        //}
-        axios.post('http://localhost:5000/api/items',this.state)
+        axios.post('https://mern-list-app.herokuapp.com/api/items',this.state)
         .then(res => {
             console.log(res);
             console.log(res.data);
